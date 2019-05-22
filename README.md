@@ -1,4 +1,4 @@
-# color-js
+# Color js
 Parse &amp; convert colors in JS
 
 ```JS
