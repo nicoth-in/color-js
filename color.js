@@ -73,7 +73,7 @@ Color.prototype.getHSLa = function() {
   return "hsla("+Math.round(this.h*360)+", "+Math.round(this.s*100)+"%, "+Math.round(this.l*100)+"%, "+this.a+")";
 }
 Color.prototype.toString = function() {
-	return this.toHex();
+	return this.getHex();
 }
 Color.prototype.getHex = function(string) {
   return "#"+this.r.toString(16)+this.g.toString(16)+this.b.toString(16);
