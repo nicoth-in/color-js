@@ -50,27 +50,30 @@ Color.prototype.fromHSVa = function(string) {
   else this.a = colors[3];
 }
 
-Color.prototype.getHSV = function(string) {
+Color.prototype.getHSV = function() {
   this.RGBtoHSV(this.r, this.g, this.b);
   return "hsv("+Math.round(this.h*360)+", "+Math.round(this.s*100)+"%, "+Math.round(this.v*100)+"%)";
 }
-Color.prototype.getHSVa = function(string) {
+Color.prototype.getHSVa = function() {
   this.RGBtoHSV(this.r, this.g, this.b);
   return "hsva("+Math.round(this.h*360)+", "+Math.round(this.s*100)+"%, "+Math.round(this.v*100)+"%, "+this.a+")";
 }
-Color.prototype.getRGB = function(string) {
+Color.prototype.getRGB = function() {
   return "rgb("+this.r+", "+this.g+", "+this.b+")";
 }
-Color.prototype.getRGBa = function(string) {
+Color.prototype.getRGBa = function() {
   return "rgba("+this.r+", "+this.g+", "+this.b+", "+this.a+")";
 }
-Color.prototype.getHSL = function(string) {
+Color.prototype.getHSL = function() {
   this.RGBtoHSL(this.r, this.g, this.b);
   return "hsl("+Math.round(this.h*360)+", "+Math.round(this.s*100)+"%, "+Math.round(this.l*100)+"%)";
 }
-Color.prototype.getHSLa = function(string) {
+Color.prototype.getHSLa = function() {
   this.RGBtoHSL(this.r, this.g, this.b);
   return "hsla("+Math.round(this.h*360)+", "+Math.round(this.s*100)+"%, "+Math.round(this.l*100)+"%, "+this.a+")";
+}
+Color.prototype.toString = function() {
+	return this.toHex();
 }
 Color.prototype.getHex = function(string) {
   return "#"+this.r.toString(16)+this.g.toString(16)+this.b.toString(16);
